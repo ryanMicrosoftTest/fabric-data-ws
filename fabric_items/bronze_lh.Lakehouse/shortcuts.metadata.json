@@ -18,8 +18,8 @@
       "type": "AdlsGen2",
       "adlsGen2": {
         "connectionId": "$(/**/connections_variables/dev_adls_dicom_target_cxn)",
-        "location": "https://healthsaadlsrheus.dfs.core.windows.net",
-        "subpath": "/healthdata/output"
+        "location": "$(/**/connections_variables/dev_adls_dicom_target_location_cxn)",
+        "subpath": "$(/**/connections_variables/dev_adls_dicom_target_subpath_cxn)"
       }
     }
   },
@@ -29,9 +29,9 @@
     "target": {
       "type": "AdlsGen2",
       "adlsGen2": {
-        "connectionId": "$(/**/connections_variables/adls_dicom_target_cxn)",
-        "location": "$(/**/connections_variables/adls_dicom_target_location_cxn)",
-        "subpath": "$(/**/connections_variables/adls_dicom_target_subpath_cxn)"
+        "connectionId": "$(/**/connections_variables/dev_adls_dicom_target_cxn)",
+        "location": "$(/**/connections_variables/dev_adls_dicom_target_location_cxn)",
+        "subpath": "$(/**/connections_variables/dev_adls_dicom_target_subpath_cxn)"
       }
     }
   },
