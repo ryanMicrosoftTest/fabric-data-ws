@@ -10,5 +10,41 @@
         "workspaceId": "c0a7b8a9-eb12-495a-b863-2cb583e31154"
       }
     }
+  },
+  {
+    "name": "output",
+    "path": "/Files",
+    "target": {
+      "type": "AdlsGen2",
+      "adlsGen2": {
+        "connectionId": "1f126619-984e-4ab2-b5fa-42d5680242f7",
+        "location": "https://healthsaadlsrheus.dfs.core.windows.net",
+        "subpath": "/healthdata/output"
+      }
+    }
+  },
+  {
+    "name": "input",
+    "path": "/Files",
+    "target": {
+      "type": "AdlsGen2",
+      "adlsGen2": {
+        "connectionId": "$(/**/connections_variables/adls_dicom_target_cxn)",
+        "location": "$(/**/connections_variables/adls_dicom_target_location_cxn)",
+        "subpath": "$(/**/connections_variables/adls_dicom_target_subpath_cxn)"
+      }
+    }
+  },
+  {
+    "name": "healthdata",
+    "path": "/Files",
+    "target": {
+      "type": "AdlsGen2",
+      "adlsGen2": {
+        "connectionId": "1f126619-984e-4ab2-b5fa-42d5680242f7",
+        "location": "$(/**/connections_variables/adls_dicom_target_location_cxn)",
+        "subpath": "$(/**/connections_variables/adls_dicom_target_subpath_cxn)"
+      }
+    }
   }
 ]
