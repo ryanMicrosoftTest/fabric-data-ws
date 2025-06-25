@@ -1,0 +1,115 @@
+table raw_address
+	lineageTag: 177ced33-9ad7-47db-8b6b-7eb8f7a4acde
+	sourceLineageTag: [dbo].[raw_address]
+
+	column AddressID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a87426d6-3ee8-410b-9325-2ec2ea940b03
+		sourceLineageTag: AddressID
+		summarizeBy: count
+		sourceColumn: AddressID
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressLine1
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 887fc051-591a-4e48-9d33-d5c24e2c68e4
+		sourceLineageTag: AddressLine1
+		summarizeBy: none
+		sourceColumn: AddressLine1
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressLine2
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 11365a68-e7d4-4387-965f-74b5fb6aa999
+		sourceLineageTag: AddressLine2
+		summarizeBy: none
+		sourceColumn: AddressLine2
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6269e7f9-b6cf-403e-bbf9-cf8dc6e2272c
+		sourceLineageTag: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column StateProvince
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 65d38a0f-f42d-4c01-a1b2-6d0284fee762
+		sourceLineageTag: StateProvince
+		summarizeBy: none
+		sourceColumn: StateProvince
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryRegion
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 106e2dac-9ac9-4774-9537-3fe42ef9786f
+		sourceLineageTag: CountryRegion
+		summarizeBy: none
+		sourceColumn: CountryRegion
+
+		annotation SummarizationSetBy = Automatic
+
+	column PostalCode
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: dca9960a-c36e-45ba-8a2d-db5964a5edc8
+		sourceLineageTag: PostalCode
+		summarizeBy: none
+		sourceColumn: PostalCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7ece74b0-43ff-4ccd-a53a-d57f430dd476
+		sourceLineageTag: rowguid
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: fb235c1c-7996-439e-a76b-563430de0fed
+		sourceLineageTag: ModifiedDate
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column loading_date
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 14b09043-c81b-42e8-abd4-dc17c54736e0
+		sourceLineageTag: loading_date
+		summarizeBy: none
+		sourceColumn: loading_date
+
+		annotation SummarizationSetBy = Automatic
+
+	partition raw_address = entity
+		mode: directLake
+		source
+			entityName: raw_address
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
