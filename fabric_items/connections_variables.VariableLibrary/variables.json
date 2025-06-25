@@ -2,19 +2,19 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/variableLibrary/definition/variables/1.0.0/schema.json",
   "variables": [
     {
-      "name": "adls_dicom_target_location_cxn",
+      "name": "dev_adls_dicom_target_location_cxn",
       "note": "",
       "type": "String",
       "value": "https://healthsaadlsrheus.dfs.core.windows.net"
     },
     {
-      "name": "adls_dicom_target_subpath_cxn",
+      "name": "dev_adls_dicom_target_subpath_cxn",
       "note": "",
       "type": "String",
       "value": "/healthdata"
     },
     {
-      "name": "adls_dicom_target_cxn",
+      "name": "dev_adls_dicom_target_cxn",
       "note": "",
       "type": "String",
       "value": "1f126619-984e-4ab2-b5fa-42d5680242f7"
